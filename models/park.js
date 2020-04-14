@@ -51,5 +51,11 @@ Park.prototype.numberOfVisitorsAnnual = function() {
   return result;
 }
 
+Park.prototype.annualRevenue = function() {
+  let annualVisitors = this.numberOfVisitorsAnnual();
+  let result = (annualVisitors * this.ticketPrice);
+  return result;
+}
+
 
 module.exports = Park;

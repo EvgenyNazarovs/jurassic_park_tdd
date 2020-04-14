@@ -1,7 +1,7 @@
 const assert = require('assert');
 const Dinosaur = require('../models/dinosaur.js');
 
-xdescribe('Dinosaur', function() {
+describe('Dinosaur', function() {
 
   let dinosaur;
 
