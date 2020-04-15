@@ -31,13 +31,6 @@ Park.prototype.mostVisitedDinosaur = function() {
 Park.prototype.dinosaursBySpecies = function(species) {
   let result = this.dinosaurs.filter(dinosaur => dinosaur.species === species);
   return result;
-
-  // let result = [];
-  // for (dinosaur of this.dinosaurs) {
-  //   if (dinosaur.species == species) {
-  //     result.push(dinosaur);
-  //   }
-  // } return result;
 }
 
 Park.prototype.numberOfVisitorsPerDay = function() {
@@ -62,6 +55,17 @@ Park.prototype.annualRevenue = function() {
 
 Park.prototype.removeDinosaursBySpecies = function(species) {
   this.dinosaurs = this.dinosaurs.filter(dinosaur => dinosaur.species !== species)
+}
+
+Park.prototype.dietCount = function() {
+  let object = new Object;
+  for (dinosaur of this.dinosaurs) {
+    if (object.hasOwnProperty(dinosaur.diet)) {
+      object[dinosaur.diet] += 1
+    } else {
+      object[dinosaur.diet] = 1
+    }
+  } return object
 }
 
 
